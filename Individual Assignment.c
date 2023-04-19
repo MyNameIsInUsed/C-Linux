@@ -24,7 +24,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    printf("Siapa nama awak? : ");
+    printf("Enter message: ");
     fgets(buffer, sizeof(buffer), stdin); 
 
     // Fork 
