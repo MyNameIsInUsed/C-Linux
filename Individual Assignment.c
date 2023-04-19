@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <signal.h>
 
-#define MAX_CHILD 3 // Max number child processes
+#define MAX_CHILD 3 
 
 void sigint_handler(int sig) {
     printf("\nInvalid command enter by the user...\n");
@@ -16,7 +16,7 @@ int main() {
     int pipefds[2]; 
     char buffer[50]; // buffer
 
-    signal(SIGINT, sigint_handler); // call interrupt handler
+    signal(SIGINT, sigint_handler); 
 
     // pipe
     if (pipe(pipefds) == -1) {
