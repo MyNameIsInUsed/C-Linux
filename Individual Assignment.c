@@ -40,7 +40,7 @@ int main() {
             char child_msg[50]; 
             int bytes = read(pipefds[0], child_msg, sizeof(child_msg)); 
 
-            printf("Child process PID %d received name: %.*s\n", getpid(), bytes, child_msg);
+            printf("Child process PID %d received: %.*s\n", getpid(), bytes, child_msg);
             close(pipefds[0]); 
             exit(0);
             
